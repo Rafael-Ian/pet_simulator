@@ -45,6 +45,17 @@ def gain_experience(self, amount):
         self.experience = 0
         print(f"Congratulations {self.name} leveled up to Level {self.level}!!")
 #Displays the pet's current stats
+def status(self):
+    print(f"\n--- {self.name}'s Status ---")
+    print(f"Species: {self.species}")
+    print(f"Age: {self.age}")
+    print(f"Level: {self.level}")
+    print(f"HP: {self.level}/100")
+    print(f"Hunger: {self.hunger}/100")
+    print(f"Energy: {self.energy}/100")
+    print(f"Happiness: {self.happiness}/100")
+
+    
 #Increase the pet's age and checks for evolution
 #Evolves the pet if age is 5 or above and not yet evolved
 #Evolves the pet, changes its species name, and boost health 
