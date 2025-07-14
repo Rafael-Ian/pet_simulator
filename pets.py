@@ -111,7 +111,16 @@ def from_dictionary(cls,data):
     )
 
 #Dog subclass with action
+class Dog(pet):
+    def __init__(self, name, **kwargs):
+        super().__init__(name, "Dog", **kwargs)
+
 #Dog's special action
+    def bark(self):
+        print(f"{self.name} barks: Woof!")
+        self.happiness = min(100, self.happiness + 5)
+        self.gain_experience(3)
+        
 #Cat subclass with action
 #Cat's special action
 #Bunny subclass with action
