@@ -36,8 +36,14 @@ def rest(self):
     self.energy = min(100, self.energy + 30)
     self.hunger = min(100, self.hunger + 10)
     self.gain_experience(5)
-    
+
 #Adds experience points
+def gain_experience(self, amount):
+    self.experience += amount
+    if self.experience >= 100:
+        self.level += 1
+        self.experience = 0
+        print(f"Congratulations {self.name} leveled up to Level {self.level}!!")
 #Displays the pet's current stats
 #Increase the pet's age and checks for evolution
 #Evolves the pet if age is 5 or above and not yet evolved
