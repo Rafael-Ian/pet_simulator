@@ -18,6 +18,8 @@ class Pet:
 
 #Feeds the pet function
 def feed(self):
+    self.hunger = max(0, self.hunger - 20)
+    self.gain_experience(5)
     
 #Plays with the pet
 #Lets the pet rest and recover energy
