@@ -79,8 +79,25 @@ def decay(self):
     self.energy = max(0, self.energy - 5)
     self.happiness = max(0, self.happiness - 2)
     self.health = max(0, self.health - (self.hunger // 30))
+
 #Converts pet's data to a dictionary for saving
+def to_dictionary(self):
+    return {
+        "name": self.name,
+        "species": self.species,
+        "age": self.age,
+        "hunger": self.hunger,
+        "energy": self.energy,
+        "happiness": self.happiness,
+        "level": self.level,
+        "experience": self.experience,
+        "health": self.health,
+        "evolved": self.evolved
+    }
+@classmethod
 #Loads pet data from dictionary
+def
+
 #Dog subclass with action
 #Dog's special action
 #Cat subclass with action
