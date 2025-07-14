@@ -65,7 +65,14 @@ def age_up(self):
 def check_evolution(self):
     if not self.evolved and self.age >= 5:
         self.evolve()
-#Evolves the pet, changes its species name, and boost health 
+
+#Evolves the pet, changes its species name, and boost health
+def evolve(self):
+    self.evolved = True
+    self.species += "(Evolved)"
+    self.health = min(100, self.health + 20)
+    print(f" {self.name} has evolved into a stronger {self.species}!")
+    
 #Apply time-based stat decay for realism
 #Converts pet's data to a dictionary for saving
 #Loads pet data from dictionary
