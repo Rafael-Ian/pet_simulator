@@ -20,8 +20,17 @@ class Pet:
 def feed(self):
     self.hunger = max(0, self.hunger - 20)
     self.gain_experience(5)
-    
+
 #Plays with the pet
+def play(self):
+    if self.energy >= 20:
+        self.happiness = min(100, self.happines + 15)
+        self.energy -= 20
+        self.hunger = min(100, self.hunger + 10)
+        self.gain_experience(10)
+    else:
+        print(f"{self.name} is too tired to play.")
+        
 #Lets the pet rest and recover energy
 #Adds experience points
 #Displays the pet's current stats
