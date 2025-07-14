@@ -131,9 +131,17 @@ class Cat(pet):
         print(f"{self.name} meows: Meow~")
         self.happiness = min(100, self.happiness + 3)
         self.gain_experience(2)
-        
+
 #Bunny subclass with action
+class Bunny(pet):
+    def __init__(self, name, **kwargs):
+        super().__init__(name, "Bunny", **kwargs)
+
 #Bunny's special action
+    def hop(self):
+        print(f"{self.name} hops around happily!")
+        self.happiness = min(100, self.happiness + 6)
+        self.gain_experience(4)
 #Panda subclass with action
 #Panda's special action
 
