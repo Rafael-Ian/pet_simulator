@@ -96,7 +96,19 @@ def to_dictionary(self):
     }
 @classmethod
 #Loads pet data from dictionary
-def
+def from_dictionary(cls,data):
+    return cls(
+        data["name"]
+        data["species"]
+        data["age"]
+        data["hunger"]
+        data["energy"]
+        data["happiness"]
+        data["level"]
+        data["experience"]
+        data["health"]
+        data.get("evolved", False)
+    )
 
 #Dog subclass with action
 #Dog's special action
