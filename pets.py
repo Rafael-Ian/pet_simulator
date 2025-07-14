@@ -72,8 +72,13 @@ def evolve(self):
     self.species += "(Evolved)"
     self.health = min(100, self.health + 20)
     print(f" {self.name} has evolved into a stronger {self.species}!")
-    
+
 #Apply time-based stat decay for realism
+def decay(self):
+    self.hunger = min(100, self.hunger + 5)
+    self.energy = max(0, self.energy - 5)
+    self.happiness = max(0, self.happiness - 2)
+    self.health = max(0, self.health - (self.hunger // 30))
 #Converts pet's data to a dictionary for saving
 #Loads pet data from dictionary
 #Dog subclass with action
