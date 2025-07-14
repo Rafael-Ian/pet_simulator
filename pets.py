@@ -11,4 +11,12 @@
 #Apply time-based stat decay for realism
 #Converts pet's data to a dictionary for saving
 #Loads pet data from dictionary
+#Dog subclass with action
+#Dog's special action
+#Cat subclass with action
+#Cat's special action
+#Bunny subclass with action
+#Bunny's special action
+#Panda subclass with action
+#Panda's special action
 
