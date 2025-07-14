@@ -1,6 +1,24 @@
+import json
+import os
+
 #Base class for all pets
+class Pet:
+    def __init__(self, name, species, age=0, hunger=50, energy=50, happiness=50, level=1, experience=0, health=100, evolved=False):
 #Person initializes a pet with name, type, and default stats
+        self.name = name
+        self.species = species
+        self.age = age
+        self.hunger = hunger
+        self.energy = energy
+        self.happiness = happiness
+        self.level = level
+        self.experience = experience
+        self.health = health
+        self.evolved = evolved
+
 #Feeds the pet function
+def feed(self):
+    
 #Plays with the pet
 #Lets the pet rest and recover energy
 #Adds experience points
