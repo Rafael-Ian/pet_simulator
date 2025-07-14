@@ -30,8 +30,13 @@ def play(self):
         self.gain_experience(10)
     else:
         print(f"{self.name} is too tired to play.")
-        
+
 #Lets the pet rest and recover energy
+def rest(self):
+    self.energy = min(100, self.energy + 30)
+    self.hunger = min(100, self.hunger + 10)
+    self.gain_experience(5)
+    
 #Adds experience points
 #Displays the pet's current stats
 #Increase the pet's age and checks for evolution
