@@ -142,6 +142,16 @@ class Bunny(pet):
         print(f"{self.name} hops around happily!")
         self.happiness = min(100, self.happiness + 6)
         self.gain_experience(4)
+
 #Panda subclass with action
+class Panda(pet):
+    def __init__(self, name, **kwargs):
+        super().__init__(name, "Panda", **kwargs)
+
 #Panda's special action
+    def eat_bamboo(self):
+        print(f"{self.name} munches on bamboo!")
+        self.hunger = max(0, self.hunger - 15)
+        self.happiness = min(100, self.happiness + 4)
+        self.gain_experience(5)
 
