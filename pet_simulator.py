@@ -27,4 +27,20 @@ def load_pet(filename="data.json"):
     return None
 
 #Lets user pick the type of pet they want and choose a name for it
+def choose_pet():
+    name = input("Name your pet: ")
+    print("Choose a species: \n1. Dog\n2. Cat\n3. Bunny\n4. Panda")
+    choice = input("Enter choice: ")
+    if choice == "1":
+        return Dog(name)
+    elif choice == "2":
+        return Cat(name)
+    elif choice == "3":
+        return Bunny(name)
+    elif choice == "4":
+        return Panda(name)
+    else:
+        print("Invalid species. Defaulting to Dog.")
+        return Dog(name)
+    
 #Main program loop
