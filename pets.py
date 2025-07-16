@@ -98,20 +98,20 @@ def to_dictionary(self):
 #Loads pet data from dictionary
 def from_dictionary(cls,data):
     return cls(
-        data["name"]
-        data["species"]
-        data["age"]
-        data["hunger"]
-        data["energy"]
-        data["happiness"]
-        data["level"]
-        data["experience"]
-        data["health"]
+        data["name"],
+        data["species"],
+        data["age"],
+        data["hunger"],
+        data["energy"],
+        data["happiness"],
+        data["level"],
+        data["experience"],
+        data["health"],
         data.get("evolved", False)
     )
 
 #Dog subclass with action
-class Dog(pet):
+class Dog(Pet):
     def __init__(self, name, **kwargs):
         super().__init__(name, "Dog", **kwargs)
 
@@ -122,7 +122,7 @@ class Dog(pet):
         self.gain_experience(3)
 
 #Cat subclass with action
-class Cat(pet):
+class Cat(Pet):
     def __init__(self, name, **kwargs):
         super().__init__(name, "Cat", **kwargs)
     
@@ -133,7 +133,7 @@ class Cat(pet):
         self.gain_experience(2)
 
 #Bunny subclass with action
-class Bunny(pet):
+class Bunny(Pet):
     def __init__(self, name, **kwargs):
         super().__init__(name, "Bunny", **kwargs)
 
@@ -144,7 +144,7 @@ class Bunny(pet):
         self.gain_experience(4)
 
 #Panda subclass with action
-class Panda(pet):
+class Panda(Pet):
     def __init__(self, name, **kwargs):
         super().__init__(name, "Panda", **kwargs)
 
