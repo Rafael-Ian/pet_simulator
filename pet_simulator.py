@@ -44,3 +44,52 @@ def choose_pet():
         return Dog(name)
     
 #Main program loop
+def main():
+    pet = load_pet()
+    if pet:
+        print(f"\n Welcome Back, {pet.name}!")
+    else:
+        pet = choose_pet()
+
+    while True:
+        pet.decay()
+        pet.age_up()
+
+        print("\nWhat would you like to do?")
+        print("1. Feed")
+        print("2. Play")
+        print("3. Rest")
+        print("4. Special Action")
+        print("5. Pet Status")
+        print("6. Save and Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            pet.feed()
+        elif choice == "2":
+            pet.play()
+        elif choice == "3":
+            pet.rest()
+        elif choice == "4":
+            if isinstance(pet, Dog):
+                pet.bark()
+            elif isinstance(pet, Cat):
+                pet.meow()
+            elif isinstance(pet, Bunny):
+                pet.hop()
+            elif isinstance(pet, Panda):
+                pet.eat_bamboo()
+        elif choice == "5":
+            pet.status()
+        elif choice == "6":
+            save_pet(pet)
+            print("Progress saved.")
+            break
+        else:
+            print("Invalid choice.")
+        
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()
